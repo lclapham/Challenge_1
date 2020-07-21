@@ -1,21 +1,8 @@
+const imgList = document.querySelectorAll('img');
 
-/////////////// Run application ///////////////////////
-window.addEventListener('load', () => {
-
-    window.alert("Hello World")
-    
-});
-
-window.addEventListener('click', (e) => {
-    console.log(e.target.id);
-})
-
-// document.getElementById('homer1').addEventListener('click', () => {
-//     window.alert("You got it")
-// });
-
-
-// $('#deliveryAddress').change(function (e) {
-//     validateUserInput(e.target.id, e.target.value)
-//     console.log(e.target.id)
-// })
+for(let i = 0; i < imgList.length; i++){
+    imgList[i].addEventListener("click",function (){
+        console.log(this.src);
+        window.open(this.src, "theImage", "resizable=yes, width=400, height=400");
+    });
+}
